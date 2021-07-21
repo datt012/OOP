@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXController">
+    <AnchorPane prefHeight="260.0" prefWidth="260.0" style="-fx-background-color: #26252e;">
+        <Button layoutX="54.0" layoutY="42.0" mnemonicParsing="false" onAction="#addButton" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: green;" text="Add" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="40.0" />
+        <Button layoutX="54.0" layoutY="110.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: red;" text="Delete" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" />
+        <Button layoutX="54.0" layoutY="176.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: yellow;" text="Update" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" />
+    </AnchorPane>
+    <AnchorPane layoutY="260.0" prefHeight="260.0" prefWidth="260.0" style="-fx-background-color: grey;">
+        <TextField fx:id="khachhangField" layoutX="58.0" layoutY="42.0" onKeyTyped="#searchField" prefWidth="140.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="40.0" />
+        <Label layoutX="20.0" layoutY="14.0" text="Search by Customer" />
+        <TextField fx:id="diachiField" layoutX="58.0" layoutY="114.0" onKeyTyped="#searchField" prefWidth="140.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="115.0" />
+        <Label layoutX="20.0" layoutY="90.0" prefHeight="18.0" prefWidth="163.0" text="Search by Address" />
+        <Label layoutX="20.0" layoutY="167.0" text="Search by Minimum Price" />
+        <TextField fx:id="sonhapvaoField" layoutX="58.0" layoutY="188.0" onKeyTyped="#searchField" prefWidth="140.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="60.0" />
+    </AnchorPane>
+    <CheckBox fx:id="selectAll" contentDisplay="TOP" layoutX="1406.0" layoutY="88.0" mnemonicParsing="false" text="Select All" />
+    <AnchorPane layoutY="520.0" prefHeight="260.0" prefWidth="260.0" style="-fx-background-color: beige;">
+        <Label layoutX="25.0" layoutY="20.0" text="Select Month" />
+        <Label layoutX="25.0" layoutY="96.0" text="Select Year" />
+        <ComboBox fx:id="thangBox" layoutX="54.0" layoutY="51.0" prefWidth="140.0" AnchorPane.leftAnchor="60.0" />
+        <ComboBox fx:id="namBox" layoutX="60.0" layoutY="130.0" prefWidth="140.0" AnchorPane.leftAnchor="60.0" />
+        <Button layoutX="80.0" layoutY="201.0" mnemonicParsing="false" onAction="#statisticButton" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: royalblue;" text="Statistic" />
+    </AnchorPane>
+    <Label layoutX="629.0" layoutY="14.0" prefHeight="68.0" prefWidth="316.0" text="Order Management" textFill="#0852b4" AnchorPane.leftAnchor="629.0" AnchorPane.rightAnchor="515.0">
+        <font>
+            <Font size="36.0" />
+        </font>
+    </Label>
+    <Button layoutX="332.0" layoutY="75.0" mnemonicParsing="false" onAction="#hadleOpen" text="Open" />
+    <Button layoutX="387.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="26.0" prefWidth="46.0" text="Save" />
+   <TableView fx:id="donhangTable" layoutX="283.0" layoutY="120.0" prefHeight="660.0" prefWidth="1180.0">
+      <columns>
+         <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+         <TableColumn fx:id="nguoiguiColumn" prefWidth="150.0" text="Sender" />
+         <TableColumn fx:id="nguoinhanColumn" prefWidth="150.0" text="Receiver" />
+         <TableColumn fx:id="diachiColumn" prefWidth="240.0" text="Address" />
+         <TableColumn fx:id="khoangcachColumn" prefWidth="100.0" text="Distance (km)" />
+         <TableColumn fx:id="cannangColumn" prefWidth="100.0" text="Weight (kg)" />
+         <TableColumn fx:id="ngayColumn" prefWidth="110.0" text="Delivery Date" />
+         <TableColumn fx:id="loaiColumn" prefWidth="100.0" text="Type" />
+         <TableColumn fx:id="chiphiColumn" minWidth="0.0" prefWidth="120.0" text="Price (VND)" />
+         <TableColumn fx:id="chonColumn" prefWidth="60.0" text="Select" />
+      </columns>
+   </TableView>
+   <Button layoutX="283.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleNew" text="New" />
+</AnchorPane>

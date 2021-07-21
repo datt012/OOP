@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="769.0" prefWidth="1190.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
+   <TableView fx:id="donhangTable" prefHeight="720.0" prefWidth="1194.0">
+      <columns>
+         <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+         <TableColumn fx:id="nguoiguiColumn" prefWidth="170.0" text="Sender" />
+         <TableColumn fx:id="nguoinhanColumn" prefWidth="170.0" text="Receiver" />
+         <TableColumn fx:id="diachiColumn" prefWidth="270.0" text="Address" />
+         <TableColumn fx:id="khoangcachColumn" prefWidth="100.0" text="Distance (km)" />
+         <TableColumn fx:id="cannangColumn" prefWidth="100.0" text="Weight (kg)" />
+         <TableColumn fx:id="ngayColumn" prefWidth="110.0" text="Delivery Date" />
+         <TableColumn fx:id="loaiColumn" prefWidth="100.0" text="Type" />
+         <TableColumn fx:id="chiphiColumn" prefWidth="120.0" text="Price (VND)" />
+      </columns>
+   </TableView>
+   <Label layoutX="729.0" layoutY="715.0" prefHeight="54.0" prefWidth="145.0" text="Company Income">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="thunhapLabel" layoutX="959.0" layoutY="715.0" prefHeight="54.0" prefWidth="187.0" textFill="#dc1c12">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="thangnamLabel" layoutX="875.0" layoutY="715.0" prefHeight="54.0" prefWidth="82.0">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="63.0" layoutY="715.0" prefHeight="54.0" prefWidth="162.0" text="Number of Order :  ">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="soluongLabel" layoutX="218.0" layoutY="715.0" prefHeight="54.0" prefWidth="102.0" textFill="#dc1c12">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+</AnchorPane>
